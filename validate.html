@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<title>The Validate Form</title>
+<head>
+	<style>
+		#user1 {
+			margin-left: 10px;
+			font-weight: bold;
+			font-size: 20px;
+			color: white;
+		}
+		#user {
+			margin-top: 20px;
+			margin-left: 10px;
+			height: 30px;
+			width: 300px;
+			font-weight: bold;
+			border: 2.5px solid white;
+			border-radius: 10px;
+		}
+		
+		#pass1 {
+			margin-left: 10px;
+			font-weight: bold;
+			font-size: 20px;
+			color: white;
+		}
+		#pass {
+			margin-left: 10px;
+			margin-top: 30px;
+			height: 30px;
+			width: 300px;
+			font-weight: bold;
+			border: 2.5px solid white;
+			border-radius: 10px;
+		}
+		
+		#btn1 {
+			color: white;
+			margin-top: 30px;
+			margin-left: 60px;
+			background-color: green;
+			height: 50px;
+			width: 200px;
+			border: 3px solid green;
+			border-radius: 10px;
+			font-weight: bold;
+		}
+		
+		#btn1:hover {
+			color: white;
+			background-color: #006000;
+			border: 3px solid #006000;
+		}
+		
+		#btn2 {
+			color: white;
+			margin-left: 10px;
+			background-color: red;
+			height: 50px;
+			width: 200px;
+			border: 3px solid red;
+			border-radius: 10px;
+			color: white;
+			font-weight: bold;
+		}
+		
+		#btn2:hover {
+			color: white;
+			background-color: #FF3540;
+			border: 3px solid #FF3540;
+		}
+		
+		form {
+			height: 250px;
+			width: 500px;
+			margin-top: 200px;
+			margin-left: 700px;
+			background-color: skyblue;
+			border: 2px solid skyblue;
+			border-radius: 10px;
+			justify-content: center;
+		}
+		h1 {
+			margin-left: 700px;	
+			color: green;
+		}
+		h2 {
+			margin-left: 700px;	
+			color: gold;
+		}
+	</style>
+</head>
+<style>
+</style>
+<body>
+	<h1>Welcome To My Validate Form</h1>
+	<form action="/onsubmit" >
+		<label for="user1" id="user1">UserName :</label>
+		<input type="text" id="user">
+		<br><br>
+		<label for="pass" id="pass1">PassWord  :</label>
+		<input type="password" id="pass">
+		<br><br>
+		<button type="button" onclick="validateForm()" id="btn1">Submit</button>
+		<button type="button" onclick="resetForm()" id="btn2" >Cancel</button>
+	</form>
+	
+	<script>
+		function validateForm() {
+			let user = document.getElementById("user").value;
+			let pass = document.getElementById("pass").value;
+			
+			if(user === ""){
+				alert("Please Enter Valid UserName");
+			}
+			else if(pass === "") {
+				alert("Please Enter Valid PassWord");
+			}
+			else {
+				alert("Your Form Is Submitted Successfully");
+			}
+			document.getElementById("user").value="";
+			document.getElementById("pass").value="";
+		}
+		
+		function resetForm(){
+			let user = document.getElementById("user").value="";
+			let pass = document.getElementById("pass").value="";
+			
+			alert("Are you sure?");
+		}
+	</script>
+</body>
+</html> 
+
+
